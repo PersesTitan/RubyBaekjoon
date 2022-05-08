@@ -11,6 +11,8 @@
     </content>
     <orderEntry type="jdk" jdkName="ruby-2.7.2-p137" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v2.1.4, ruby-2.7.2-p137) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.13.0, ruby-2.7.2-p137) [gem]" level="application" />
   </component>
   <component name="RakeTasksCache">
     <option name="myRootTask">
