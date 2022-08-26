@@ -1,11 +1,31 @@
-values = gets.chomp.split
-a = values[0].to_i
-b = values[1].to_i
+require 'set'
 
-if a > b
-  puts ">"
-elsif a < b
-  puts "<"
-else
-  puts "=="
+def count(line)
+  set = Set.new
+  (0..line.size).each do |i|
+    (i..line.size).each do |j|
+      set<<line[i..j]
+    end
+  end
+  set.size-1
 end
+
+arr = ["a", "b", "a", "b"]
+puts count(arr)
+
+count = gets.to_i
+text = Array.new
+total = 0
+
+(1..count).each do
+  value = gets.chomp.split(" ")
+  if value[0] == '+'
+    text<<value[1]
+  else
+    text.delete_at(0)
+  end
+  total += count(text)
+end
+
+puts total % 1000000007
+
